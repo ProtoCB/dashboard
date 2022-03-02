@@ -23,7 +23,8 @@ const CancelExperimentBlock = (props) => {
             "authorization": "Bearer " + props.token 
           }
         }).then((response) => {
-                setLoading(false);
+          console.log(response.status);
+          setLoading(false);
         }).catch((error) => {
             setError({
                 isError: true,

@@ -41,8 +41,9 @@ const ScheduleExperimentBlock = (props) => {
               headers: {
                 "authorization": "Bearer " + props.token 
               },
-              data: exprimentRecipe
+              data: { "recipe": exprimentRecipe }
             }).then((response) => {
+                console.log(response.status);
                 setSuccess({
                   isSuccess: true,
                   successMessage: "Scheduling succeeded"

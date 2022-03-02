@@ -20,8 +20,7 @@ class LandingPage extends Component {
 
     componentDidMount() {
       this.interval = setInterval(() => {
-        console.log(this.state.token);
-        console.log(this.state.url);
+
         axios({
           method: "get",
           url: this.state.url + "/api/v1/experiment/agents",
@@ -30,7 +29,6 @@ class LandingPage extends Component {
           }
         }).then((response)=>{
             if(response.status === 200){
-              console.log(response.data);
               this.setState({agents: response.data.agents, token: this.state.token, url: this.state.url});
             }
         }).catch((error)=>{
@@ -38,6 +36,7 @@ class LandingPage extends Component {
         })
       }, 2000);
     }
+    
     componentWillUnmount() {
       clearInterval(this.interval);
     }
