@@ -56,6 +56,11 @@ class LandingPage extends Component {
                   </Col>
                 </Row>
                 <Row>
+                    <Col md={ {span: 4, offset: 4}} lg={ {span: 6, offset: 3}} sm={ {span: 10, offset:1}} xs={ {span: 10, offset:1}} style={headingStyle}>
+                        Agent Count - {this.state.agents.length}
+                    </Col>
+                </Row>
+                <Row>
                     <Col md={ {span: 8, offset: 2}} lg={ {span: 8, offset: 2}} sm={ {span: 10, offset:1}}  xs={ {span: 10, offset:1}} >
                         <Table responsive bordered>
                             <thead style={theadStyle}>
