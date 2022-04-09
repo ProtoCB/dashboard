@@ -35,9 +35,9 @@ const ScheduleExperimentBlock = (props) => {
           reader.onload = () => {
             const exprimentRecipe = JSON.parse(reader.result);
 
-            let now = new Date();
-            let secondsSinceEpoch = Math.round(now.getTime() / 1000);
-            exprimentRecipe["experimentStartTime"] = secondsSinceEpoch + 15;
+            // let now = new Date();
+            // let secondsSinceEpoch = Math.round(now.getTime() / 1000);
+            // exprimentRecipe["experimentStartTime"] = secondsSinceEpoch + 15;
 
             axios({
               method: "post",
